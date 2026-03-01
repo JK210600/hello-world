@@ -7,7 +7,7 @@ def debug_print(debug_msg=None, **kwargs):
 
 
 def mergesort(array):
-    debug_print(array=array)
+    debug_print(array=array)  # Print array once at function start
     if len(array) <= 1:
         return array
 
@@ -16,10 +16,12 @@ def mergesort(array):
     
     left_part = array[:m]
     right_part = array[m:]
-    debug_print(array=left_part)
+    
+    # REMOVE these duplicate debug_print calls:
+    # debug_print(array=left_part)  <-- DELETE THIS
+    # debug_print(array=right_part) <-- DELETE THIS
     
     left = mergesort(left_part)
-    debug_print(array=right_part)
     right = mergesort(right_part)
 
     debug_print(debug_msg="Merging...", left=left, right=right)
