@@ -1,2 +1,3 @@
-'print("Hello, World!")' 
-'print("Learning Git is fun!")' 
+print("Hello, World!")
+print("Hello from feature")
+print("Hello from release")
